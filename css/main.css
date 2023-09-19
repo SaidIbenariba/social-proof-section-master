@@ -1,0 +1,151 @@
+:root {
+  --main-color: hsl(300, 43%, 22%);
+  --review-color: hsl(300, 24%, 96%);
+  --veriefed-color: hsl(333, 80%, 67%);
+  --star-color: #f4994e;
+  --white-color: hsl(0, 0%, 100%);
+  --description-color: hsl(303, 10%, 53%);
+}
+/* 
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%) */
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  margin: 0;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3em;
+  color: var(--main-color);
+  max-width: 300px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header p {
+  color: var(--description-color);
+  line-height: 18px;
+  max-width: 400px;
+}
+.star-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.star-review .box {
+  display: flex;
+  background-color: var(--review-color);
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.star-text {
+  color: var(--main-color);
+  font-weight: bolder;
+}
+/*  person review */
+.reviews {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.review-box {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+  justify-content: space-evenly;
+  color: var(--white-color);
+  border-radius: 10px;
+  max-width: 300px;
+  height: 150px;
+  align-items: stretch;
+  padding: 20px;
+  padding-bottom: 0px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.review-box .person {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.review-box .person img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+.review-box .person p {
+  font-size: 0.3em;
+  font-weight: lighter;
+}
+.verified {
+  margin-top: 5px;
+  color: var(--veriefed-color);
+}
+.review-box .person .name {
+  font-weight: bold;
+}
+@media (min-width: 1440px) {
+  .users {
+    display: flex;
+    flex-direction: row;
+    /* left: 50%;
+    transform: translate(-50%, 0); */
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  .reviews .container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  header .container {
+    max-width: 400px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  #box-2 {
+    margin-left: 50px;
+  }
+  #box-3 {
+    margin-left: 100px;
+  }
+  .star-review .container {
+    margin-top: 50px;
+  }
+  .reviews .container .review-box:nth-child(2) {
+    margin-top: 50px;
+  }
+  .reviews .container .review-box:nth-child(3) {
+    margin-top: 100px;
+  }
+}
